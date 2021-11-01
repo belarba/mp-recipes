@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Recipe:</h1>
+  <div class='recipe-box'>
+    <h3><%= @recipe.title %></h3>
+    <label>By "<%= @recipe.chef %>"</label>
+
+    <img class='recipe-image' src="<%= @recipe.image_url %>" />
+    <p><%= @recipe.description %></p>
+    <em>Tags: <%= @recipe.tags %></em>
+  </div>
+  <button onclick="goBack()">Back</button>
+</div>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
