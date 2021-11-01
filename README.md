@@ -21,3 +21,9 @@ $ rails s
 ```
 
 Access [http://localhost:3000](http://localhost:3000) to navigate
+
+
+There's only one super simple test, to run it just
+```bash
+$ rspec
+```
