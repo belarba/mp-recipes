@@ -2,11 +2,11 @@
   <h1>Recipe:</h1>
   <div class='recipe-box'>
     <h3><%= @recipe.title %></h3>
-    <label>By "<%= @recipe.chef %>"</label>
+    <label>By "<%= @recipe.fields.key?(:chef) ? @recipe.chef.name : '' %>"</label>
 
-    <img class='recipe-image' src="<%= @recipe.image_url %>" />
+    <img class='recipe-image' src="<%= @recipe.photo.url %>" />
     <p><%= @recipe.description %></p>
-    <em>Tags: <%= @recipe.tags %></em>
+    <em>Tags: <%= @recipe.fields.key?(:tags) ? @recipe.tags.collect(&:name).join(',') : '' %></em>
   </div>
   <button onclick="goBack()">Back</button>
 </div>

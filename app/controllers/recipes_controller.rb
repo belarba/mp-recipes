@@ -1,11 +1,11 @@
 class RecipesController < ApplicationController
 
   def index
-    @recipes = Recipe.all
+    @recipes = helpers.contentful.entries(content_type:'recipe', include: 2)
   end
 
   def show
-    @recipes = Recipe.fetched.blank? ? Recipe.all : Recipe.fetched
+    @recipes = helpers.contentful.entries(content_type:'recipe', include: 2)
     @recipe = @recipes.find { |r|  r.id == params[:id] }
   end
 
