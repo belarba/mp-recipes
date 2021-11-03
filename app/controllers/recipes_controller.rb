@@ -2,6 +2,7 @@ class RecipesController < ApplicationController
 
   def index
     @@recipes ||= helpers.contentful.entries(content_type:'recipe', include: 2)
+    @recipes = @@recipes
   end
 
   def show
