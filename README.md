@@ -15,6 +15,10 @@ Install rails and dependencies
 ```bash
 $ bundle install
 ```
+Install yarn dependencies
+```bash
+$ yarn install
+```
 Start the server
 ```bash
 $ rails s
